@@ -10,7 +10,6 @@ const Films = () => {
         fetch('https://ghibliapi.herokuapp.com/films')
         .then(r => r.json())
         .then(r => setFilms(r));
-            
 
     },  []);
 
@@ -30,8 +29,6 @@ const Films = () => {
     };
 
 export default Films;
-
-    
 
 
 
