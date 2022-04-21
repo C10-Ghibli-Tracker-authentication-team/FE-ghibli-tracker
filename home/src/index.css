@@ -2,13 +2,16 @@
 
 :root
 {
-    font-size: 62.5%;
     --Primary: #001219;
     --Secondary: #005F73;
     --Tertiary: #0A9396;
     --Light: #94D2BD;
     --Orange: #CA6702;
     --Red: #AE2012;
+}
+
+html {
+  font-size: 62.5%;
 }
 
 *{
@@ -33,7 +36,3 @@ body {
   max-width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
