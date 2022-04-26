@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Cards from './Cards';
-import "./Films.css";
+import './Films.css';
 
 const Films = () => {
 
@@ -14,7 +14,7 @@ const Films = () => {
     },  []);
 
     return (
-        <div className="characters">
+        <div className="films">
           {films.map((film) => {
            return <Cards
                     image={film.image}

@@ -1,17 +1,17 @@
+<<<<<<< HEAD:home/src/components/Films.css
+=======
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@500&display=swap');
 
 :root
 {
+    
+    font-size: 62.5%;
     --Primary: #001219;
     --Secondary: #005F73;
     --Tertiary: #0A9396;
     --Light: #94D2BD;
     --Orange: #CA6702;
     --Red: #AE2012;
-}
-
-html {
-  font-size: 62.5%;
 }
 
 *{
@@ -22,17 +22,10 @@ html {
   color: var(--Primary);
 }
 
-body {
-  overflow-x: hidden;
-  position: relative;
-  width: 42.8rem;
-  height: 92.6rem;
-  background: var(--Primary);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 1.5rem;
+body {    
+    background: var(--Primary); 
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 1.5rem;
 }
 
-body {
-  max-width: 100%;
-}
-
+>>>>>>> gabriel:src/home/components/Films/Films.css
