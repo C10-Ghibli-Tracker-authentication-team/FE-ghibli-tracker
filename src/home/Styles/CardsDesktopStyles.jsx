@@ -60,4 +60,3 @@ export const Toggle = styled.button`
         height: 4rem;
     }
 `
-
