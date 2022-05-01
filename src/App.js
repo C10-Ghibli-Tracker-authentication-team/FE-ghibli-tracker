@@ -1,10 +1,10 @@
 import React from 'react';
-import Navbar from './home/components/Navbar/Navbar';
-import NavbarTablet from './home/components/Navbar/NavbarTablet';
-import NavbarDesktop from './home/components/Navbar/NavbarDesktop';
+import Navbar from './Navbar/index';
+import NavbarTablet from './Navbar/NavbarTablet';
+import NavbarDesktop from './Navbar/NavbarDesktop';
 import Films from './home/index';
-import FilmsTablet from './home/components/Films/FilmsTablet';
-import FilmsDesktop from './home/components/Films/FilmsDesktop';
+import FilmsTablet from './home/FilmsTablet';
+import FilmsDesktop from './home/FilmsDesktop';
 import  { Breakpoint, BreakpointProvider } from 'react-socks';
 import { setDefaultBreakpoints } from 'react-socks';
 
