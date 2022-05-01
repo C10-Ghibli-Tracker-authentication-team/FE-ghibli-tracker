@@ -2,7 +2,7 @@ import React from 'react';
 import Navbar from './home/components/Navbar/Navbar';
 import NavbarTablet from './home/components/Navbar/NavbarTablet';
 import NavbarDesktop from './home/components/Navbar/NavbarDesktop';
-import Films from './home/components/Films/Films';
+import Films from './home/index';
 import FilmsTablet from './home/components/Films/FilmsTablet';
 import FilmsDesktop from './home/components/Films/FilmsDesktop';
 import  { Breakpoint, BreakpointProvider } from 'react-socks';
