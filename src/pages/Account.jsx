@@ -1,9 +1,9 @@
 import React from 'react';
 import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { setDefaultBreakpoints } from 'react-socks';
-import UserProfile from '../components/accountComponents/UserProfile/UserProfile';
-import UserProfileTablet from '../components/accountComponents/UserProfile/UserProfileTablet';
-import UserProfileDesktop from '../components/accountComponents/UserProfile/UserProfileDesktop';
+import UserProfile from '../components/AccountComponents/UserProfile/UserProfile';
+import UserProfileTablet from '../components/AccountComponents/UserProfile/UserProfileTablet';
+import UserProfileDesktop from '../components/AccountComponents/UserProfile/UserProfileDesktop';
 
 setDefaultBreakpoints([
   { xsmall: 0 }, // all mobile devices
