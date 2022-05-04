@@ -1,5 +1,5 @@
 import React from 'react';
-import user_profile from './user_profile.jpg';
+import user_profile from '../assets/user_profile.jpg';
 import {
   UserInfo,
   Figure,
