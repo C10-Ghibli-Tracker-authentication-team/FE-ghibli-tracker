@@ -1,7 +1,7 @@
 import React from 'react';
-import Films from '../components/homeComponents/Films/Films';
-import FilmsTablet from '../components/homeComponents/Films/FilmsTablet';
-import FilmsDesktop from '../components/homeComponents/Films/FilmsDesktop';
+import Films from '../components/HomeComponents/Films/Films';
+import FilmsTablet from '../components/HomeComponents/Films/FilmsTablet';
+import FilmsDesktop from '../components/HomeComponents/Films/FilmsDesktop';
 import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { setDefaultBreakpoints } from 'react-socks';
 
