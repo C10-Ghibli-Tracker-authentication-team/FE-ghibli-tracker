@@ -17,17 +17,14 @@ function Account() {
     <>
       <BreakpointProvider>
         <Breakpoint small down>
-          {/* <Navbar />, */}
           <UserProfile />,
         </Breakpoint>
 
         <Breakpoint medium only>
-          {/* <NavbarTablet />, */}
           <UserProfileTablet />,
         </Breakpoint>
 
         <Breakpoint large up>
-          {/* <NavbarDesktop />, */}
           <UserProfileDesktop />,
         </Breakpoint>
       </BreakpointProvider>
