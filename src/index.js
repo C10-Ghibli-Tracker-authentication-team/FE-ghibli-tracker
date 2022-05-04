@@ -1,7 +1,7 @@
 import { render } from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import MovieApp from "./Film/index";
+import MovieApp from "./home";
 
 const rootElement = document.getElementById("root");
 render(

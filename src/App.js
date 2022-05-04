@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar/index';
+import Navbar from './Navbar/';
 import NavbarTablet from './Navbar/NavbarTablet';
 import NavbarDesktop from './Navbar/NavbarDesktop';
 import Films from './home/index';
