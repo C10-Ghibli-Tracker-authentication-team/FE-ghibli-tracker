@@ -9,9 +9,9 @@ import {
   Rate,
   Toggle,
 } from '../../Styles/CardsStyles';
-import Stars from '../Stars';
+import Stars from './Stars';
 import ReactStars from 'react-rating-stars-component';
-import FavIcon from '../ToggleHeart';
+import FavIcon from './ToggleHeart';
 
 const Cards = ({ image, title, year, description }) => {
   return (
