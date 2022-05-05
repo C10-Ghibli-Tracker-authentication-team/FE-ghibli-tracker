@@ -3,7 +3,7 @@ import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { setDefaultBreakpoints } from 'react-socks';
 import UserProfile from '../components/AccountComponents/UserProfile/UserProfile';
 import UserProfileTablet from '../components/AccountComponents/UserProfile/UserProfileTablet';
-import UserProfileDesktop from '../components/AccountComponents/UserProfile/UserProfileDesktop';
+// import UserProfileDesktop from '../components/AccountComponents/UserProfile/UserProfileDesktop';
 
 setDefaultBreakpoints([
   { xsmall: 0 }, // all mobile devices
@@ -24,9 +24,9 @@ function Account() {
           <UserProfileTablet />,
         </Breakpoint>
 
-        <Breakpoint large up>
+        {/* <Breakpoint large up>
           <UserProfileDesktop />,
-        </Breakpoint>
+        </Breakpoint> */}
       </BreakpointProvider>
     </>
   );
