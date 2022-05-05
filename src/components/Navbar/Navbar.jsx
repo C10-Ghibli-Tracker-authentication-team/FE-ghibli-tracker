@@ -7,7 +7,7 @@ import {
   UserIcon,
   Search,
   SearchIcon,
-} from '../../../styles/Navbar/NavbarStyles';
+} from '../../styles/Navbar/NavbarStyles';
 
 const Navbar = () => {
   return (
