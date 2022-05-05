@@ -7,7 +7,7 @@ import {
   UserName,
   UserLinks,
   A,
-} from '../../Styles/UserProfileStyles';
+} from '../../../styles/UserProfile/UserProfileStyles';
 
 const UserProfile = ({ username }) => {
   return (
