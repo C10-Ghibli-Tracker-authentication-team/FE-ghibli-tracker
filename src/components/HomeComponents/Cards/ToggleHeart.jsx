@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
+<<<<<<< HEAD:src/ToggleHeart.jsx
 import { Toggle } from "./Styles/CardsStyles";
+=======
+import { Toggle } from "../../../styles/Cards/CardsStyles";
+>>>>>>> santiago:src/components/HomeComponents/Cards/ToggleHeart.jsx
 
 
 const FavIcon = () => {
