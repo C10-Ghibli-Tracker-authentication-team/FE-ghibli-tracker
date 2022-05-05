@@ -12,7 +12,7 @@ import {
 const UserProfile = ({ username }) => {
   return (
     <>
-    {/* USER INFORMATION */}
+      {/* USER INFORMATION */}
       <UserInfo>
         <Figure>
           <Image src={user_profile} alt="user image profile" />
@@ -21,7 +21,7 @@ const UserProfile = ({ username }) => {
           {/* {username} */} Santiago Bastidas
         </UserName>
       </UserInfo>
-    {/* USER LINKS */}
+      {/* USER LINKS */}
       <UserLinks>
         <A>Scores</A>
         <A>Passwords</A>
