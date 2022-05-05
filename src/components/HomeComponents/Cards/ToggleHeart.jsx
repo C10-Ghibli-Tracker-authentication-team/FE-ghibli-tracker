@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
-import { Toggle } from "../Styles/CardsStyles";
+import { Toggle } from "../../../styles/Cards/CardsStyles";
 
 
 const FavIcon = () => {

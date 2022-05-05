@@ -8,7 +8,7 @@ import {
   P,
   Rate,
   Toggle,
-} from '../../Styles/CardsDesktopStyles';
+} from '../../../styles/Cards/CardsDesktopStyles';
 import Stars from './Stars';
 import ReactStars from 'react-rating-stars-component';
 import FavIcon from './ToggleHeart';
