@@ -1,6 +1,6 @@
 import React from 'react';
-import user from './User-icon.png';
-import search from './search.png';
+import user from './user-icon.svg';
+import search from './search.svg';
 import {
   Container,
   User,
