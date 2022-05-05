@@ -3,7 +3,7 @@ import { Section, Image, Data, H2, H3, P, Rate, Toggle } from "./styles/FilmDeta
 import Stars from "./Stars";
 import ReactStars from "react-rating-stars-component";
 import FavIcon from "./ToggleHeart";
-import NavbarArrow from '../Components/Navbar/NavbarArrow';
+import NavbarArrow from '../Navbar/NavbarArrow';
 
 const FilmDetails = ({image,title,year,description}) => {
 
