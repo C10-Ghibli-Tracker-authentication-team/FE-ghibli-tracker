@@ -1,33 +1,17 @@
 import React from 'react';
-import { Breakpoint, BreakpointProvider } from 'react-socks';
-import { setDefaultBreakpoints } from 'react-socks';
-import UserProfile from '../components/AccountComponents/UserProfile/UserProfile';
-import UserProfileTablet from '../components/AccountComponents/UserProfile/UserProfileTablet';
-// import UserProfileDesktop from '../components/AccountComponents/UserProfile/UserProfileDesktop';
-
-setDefaultBreakpoints([
-  { xsmall: 0 }, // all mobile devices
-  { small: 576 }, // mobile devices (not sure which one's this big)
-  { medium: 768 }, // ipad, ipad pro, ipad mini, etc
-  { large: 992 }, // smaller laptops
-]);
+import UserProfile from '../components/AccountComponents/UserProfile';
+import { Container } from '../styles/Account/AccountStyles';
+import UserLink from '../components/AccountComponents/UserLinks/';
+import UserProgress from '../components/AccountComponents/UserProgress';
 
 function Account() {
   return (
     <>
-      <BreakpointProvider>
-        <Breakpoint small down>
-          <UserProfile />,
-        </Breakpoint>
-
-        <Breakpoint medium only>
-          <UserProfileTablet />,
-        </Breakpoint>
-
-        {/* <Breakpoint large up>
-          <UserProfileDesktop />,
-        </Breakpoint> */}
-      </BreakpointProvider>
+      <Container>
+        <UserProfile />
+        <UserLink></UserLink>
+        <UserProgress></UserProgress>
+      </Container>
     </>
   );
 }

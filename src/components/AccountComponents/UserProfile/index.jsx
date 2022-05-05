@@ -5,14 +5,11 @@ import {
   Figure,
   Image,
   UserName,
-  UserLinks,
-  A,
 } from '../../../styles/UserProfile/UserProfileStyles';
 
-const UserProfile = ({ username }) => {
+const UserProfile = () => {
   return (
     <>
-      {/* USER INFORMATION */}
       <UserInfo>
         <Figure>
           <Image src={user_profile} alt="user image profile" />
@@ -21,11 +18,6 @@ const UserProfile = ({ username }) => {
           {/* {username} */} Santiago Bastidas
         </UserName>
       </UserInfo>
-      {/* USER LINKS */}
-      <UserLinks>
-        <A>Scores</A>
-        <A>Passwords</A>
-      </UserLinks>
     </>
   );
 };
