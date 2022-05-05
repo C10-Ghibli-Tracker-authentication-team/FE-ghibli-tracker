@@ -43,6 +43,4 @@ html {
 
 body {
   background: var(--Primary);
-  min-width: 32rem;
-  min-height: 100%;
 }
