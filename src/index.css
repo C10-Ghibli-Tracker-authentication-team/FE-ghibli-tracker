@@ -1,28 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@500&display=swap');
-
-:root
-{
-    
-    font-size: 62.5%;
-    --Primary: #001219;
-    --Secondary: #005F73;
-    --Tertiary: #0A9396;
-    --Light: #94D2BD;
-    --Orange: #CA6702;
-    --Red: #AE2012;
+:root {
+  /* Blues */
+  --Primary: #001219;
+  --Secondary: #005f73;
+  --Tertiary: #0a9396;
+  --Light: #94d2bd;
+  /* Warm */
+  --Orange: #ca6702;
+  --Red: #ae2012;
+  /* Monochromatic */
+  --White: #fff;
+  --Light-grey: #d4d4d4;
+  --Silver-chalice: #ababab;
+  --Davys-grey: #555555;
+  --Jet: #2a2a2a;
+  --Black: #000;
+  /* Font-sizes */
+  --Headline-1: bold 9.2rem 'Montserrat';
+  --Headline-2: bold 6.4rem 'Montserrat';
+  --Headline-3: bold 4.8rem 'Montserrat';
+  --Headline-4: bold 3.6rem 'Montserrat';
+  --Headline-5: normal 2.4rem 'Montserrat';
+  --Headline-6: normal 2rem 'Montserrat';
+  --Subtitle-1: normal 1.6rem 'Montserrat';
+  --Subtitle-2: normal 1.4rem 'Montserrat';
+  --Body-1: 1.6rem;
+  --Body-2: 1.4rem;
+  --BUTTON: 1.4rem;
+  --Caption: 1.2rem;
+  --OVERLINE: 1.6rem;
 }
 
-*{
-  box-sizing: border-box; 
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat';
-  color: var(--Primary);
+  font-family: 'Montserrat', sans-serif;
 }
 
-body {    
-    background: var(--Primary); 
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 1.5rem;
+body {
+  background: var(--Primary);
 }
-
