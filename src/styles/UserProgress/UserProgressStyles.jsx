@@ -4,7 +4,7 @@ import { Colors, Fonts } from '../GlobalStyles/GlobalStyles';
 const barWidth = (17 / 24) * 100;
 
 export const Container = styled.div`
-  margin: 9.4rem 2.4rem 0 2.4rem;
+  margin: 9.4rem 2.4rem 3.2rem 2.4rem;
   display: flex;
   flex-direction: column;
 `;
