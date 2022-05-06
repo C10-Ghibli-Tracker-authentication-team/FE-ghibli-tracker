@@ -14,11 +14,11 @@ const Navbar = () => {
     <>
       <Container className="container-menu">
         <User href="/account">
-          <UserIcon src={user} alt="account" className="user-icon" />
+          <UserIcon src={user} alt="account"/>
         </User>
 
         <Search href="/search">
-          <SearchIcon src={search} alt="search" className="search-icon" />
+          <SearchIcon src={search} alt="search"/>
         </Search>
       </Container>
     </>
