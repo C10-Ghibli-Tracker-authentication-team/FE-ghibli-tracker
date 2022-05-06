@@ -14,9 +14,7 @@ const UserProfile = () => {
         <Figure>
           <Image src={user_profile} alt="user image profile" />
         </Figure>
-        <UserName className="username">
-          {/* {username} */} Santiago Bastidas
-        </UserName>
+        <UserName className="username">{/* {username} */} santiagobr</UserName>
       </UserInfo>
     </>
   );
