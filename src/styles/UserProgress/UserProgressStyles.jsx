@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Colors, Fonts } from '../GlobalStyles/GlobalStyles';
 
-const barWidth = (43/100)*100;
+const barWidth = (17 / 24) * 100;
 
 export const Container = styled.div`
   margin: 9.4rem 2.4rem 0 2.4rem;
@@ -26,6 +26,7 @@ export const BarWrap = styled.div`
 export const Bar = styled.div`
   height: 100%;
   width: ${barWidth}%;
+  max-width: 100%;
   border-radius: 1.5rem;
   background-color: ${Colors.Light};
 `;
