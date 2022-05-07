@@ -14,16 +14,12 @@ export const Container = styled.div`
     padding: 0 1.6rem;
   }
 `;
-export const User = styled.a`
+export const Link = styled.a`
   width: 3rem;
 `;
 export const UserIcon = styled.img`
   max-height: 100%;
   max-width: 100%;
-`;
-
-export const Search = styled.a`
-  width: 3rem;
 `;
 export const SearchIcon = styled.img`
   max-height: 100%;

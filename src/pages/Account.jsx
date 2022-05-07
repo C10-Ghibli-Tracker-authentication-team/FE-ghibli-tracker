@@ -10,7 +10,7 @@ function Account() {
       <Container>
         <UserProfile />
         <UserLink></UserLink>
-        <UserProgress></UserProgress>
+        <UserProgress />
       </Container>
     </>
   );
