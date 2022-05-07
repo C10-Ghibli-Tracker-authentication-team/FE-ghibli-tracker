@@ -2,17 +2,17 @@ import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import Account from './pages/Account';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
       <Router>
         <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/account" component={Account} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
       </Router>
     </>
   );
