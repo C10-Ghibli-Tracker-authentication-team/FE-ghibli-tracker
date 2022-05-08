@@ -1,5 +1,5 @@
 import React from 'react';
-import LoginForm from '../Components/LoginComponents/index';
+import LoginForm from '../components/LoginComponents/index';
 // import FilmsTablet from '../Components/HomeComponents/Films/FilmsTablet';
 // import FilmsDesktop from '../Components/HomeComponents/Films/FilmsDesktop';
 import { Breakpoint, BreakpointProvider } from 'react-socks';

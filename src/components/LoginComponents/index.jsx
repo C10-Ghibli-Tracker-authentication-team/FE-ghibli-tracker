@@ -13,7 +13,7 @@ import {
     TwitterLogo,
     Facebook,
     FacebookLogo
-} from "./../../styles/Login/LoginFormStyles";
+} from "../../styles/Login/LoginFormStyles";
 
 
 

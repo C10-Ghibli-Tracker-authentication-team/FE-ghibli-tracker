@@ -1,5 +1,5 @@
 import React from 'react';
-import Films from '../Components/HomeComponents/Films/index';
+import Films from '../components/HomeComponents/Films/index';
 import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { setDefaultBreakpoints } from 'react-socks';
 
