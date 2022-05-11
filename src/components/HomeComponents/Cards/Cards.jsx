@@ -17,7 +17,6 @@ const Cards = ({ image, title, year, description }) => {
   return (
     <>
       <Section>
-        ,
         <Image src={image} alt="film image" />
         <Data className="card_data">
           <H2 className="title">{title}</H2>
