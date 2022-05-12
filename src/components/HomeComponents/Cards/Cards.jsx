@@ -8,15 +8,17 @@ import {
   P,
   Rate,
   Toggle,
-} from '../../../styles/Cards/CardsStyles';
-import Stars from './Stars';
+} from '../../../styles/Cards/CardsDesktopStyles';
+import Stars from '../Stars';
 import ReactStars from 'react-rating-stars-component';
-import FavIcon from './ToggleHeart';
+import FavIcon from '../ToggleHeart';
+import { Link } from 'react-router-dom';
 
 const Cards = ({ image, title, year, description }) => {
   return (
     <>
       <Section>
+        ,
         <Image src={image} alt="film image" />
         <Data className="card_data">
           <H2 className="title">{title}</H2>
@@ -32,6 +34,7 @@ const Cards = ({ image, title, year, description }) => {
               <FavIcon />
             </Toggle>
           </Rate>
+          <Link to="movie-details">Details</Link>
         </Data>
       </Section>
     </>

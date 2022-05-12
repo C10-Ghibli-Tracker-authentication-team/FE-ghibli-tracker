@@ -1,5 +1,7 @@
 import React from 'react';
-import Films from '../components/HomeComponents/Films/index';
+import LoginForm from '../components/LoginComponents/index';
+// import FilmsTablet from '../Components/HomeComponents/Films/FilmsTablet';
+// import FilmsDesktop from '../Components/HomeComponents/Films/FilmsDesktop';
 import { Breakpoint, BreakpointProvider } from 'react-socks';
 import { setDefaultBreakpoints } from 'react-socks';
 
@@ -10,24 +12,24 @@ setDefaultBreakpoints([
   { large: 992 }, // smaller laptops
 ]);
 
-function Home() {
+function Login() {
   return (
     <>
       <BreakpointProvider>
         <Breakpoint small down>
-          <Films />,
+          <LoginForm />,
         </Breakpoint>
 
         <Breakpoint medium only>
-          <Films />,
+          <LoginForm />,
         </Breakpoint>
 
         <Breakpoint large up>
-          <Films />,
+          <LoginForm />,
         </Breakpoint>
       </BreakpointProvider>
     </>
   );
 }
 
-export default Home;
+export default Login;
