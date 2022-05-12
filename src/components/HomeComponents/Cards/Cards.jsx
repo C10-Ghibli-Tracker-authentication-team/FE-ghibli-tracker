@@ -9,9 +9,9 @@ import {
   Rate,
   Toggle,
 } from '../../../styles/Cards/CardsDesktopStyles';
-import Stars from '../Stars';
+import Stars from './Stars';
 import ReactStars from 'react-rating-stars-component';
-import FavIcon from '../ToggleHeart';
+import FavIcon from './ToggleHeart';
 import { Link } from 'react-router-dom';
 
 const Cards = ({ image, title, year, description }) => {
