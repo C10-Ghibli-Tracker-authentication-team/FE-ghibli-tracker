@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  UserLinks,
-  A,
-} from '../../../styles/UserLinks/UserLinksStyles';
+import { UserLinks, A } from '../../../styles/UserLinks/UserLinksStyles';
 
 const UserLink = () => {
   return (
@@ -11,7 +8,6 @@ const UserLink = () => {
         <A>Scores</A>
         <A>Passwords</A>
       </UserLinks>
-      ;
     </>
   );
 };

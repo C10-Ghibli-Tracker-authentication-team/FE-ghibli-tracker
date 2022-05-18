@@ -8,15 +8,14 @@ import NavbarFilter from './NavbarFilter';
 const Navbar = () => {
   const location = useLocation().pathname;
 
-  if (location === '/login') {
-    return <NavbarHidden />;
-  } else if (location === '/') {
-    return <NavbarUser />;
-  } else if (location === '/filter') {
-    return <NavbarFilter />;
-  } else {
-    return <NavbarArrow />;
-  }
+  const PATH_NAVBAR = {
+    '/login': <NavbarHidden />,
+    '/': <NavbarUser />,
+    '/filter': <NavbarFilter />,
+  };
+
+  const NAV = PATH_NAVBAR[location] || <NavbarArrow />;
+  return NAV;
 };
 
 export default Navbar;

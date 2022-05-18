@@ -8,15 +8,15 @@ import {
 } from '../../../styles/UserProfile/UserProfileStyles';
 
 const UserProfile = () => {
-  const [user, setUser] = useState([]);
+  // const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch('https://be-ghibli-tracker.herokuapp.com/auth/facebook')
-      .then((r) => console.log(r.json()))
-      .then((u) => setUser(u));
+    fetch('https://be-ghibli-tracker.herokuapp.com/auth/twitter').then((r) =>
+      console.log(r.json())
+    );
   }, []);
 
-  console.log(user);
+  // console.log(user);
   return (
     <>
       <UserInfo>
