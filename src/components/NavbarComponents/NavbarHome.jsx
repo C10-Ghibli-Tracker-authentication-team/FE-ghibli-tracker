@@ -1,6 +1,6 @@
 import React from 'react';
-import user from './user-icon.svg';
-import search from './search.svg';
+import user from './assets/user-icon.svg';
+import search from './assets/search.svg';
 import { Link } from 'react-router-dom';
 import { Container } from '../../styles/Navbar/NavbarStyles';
 

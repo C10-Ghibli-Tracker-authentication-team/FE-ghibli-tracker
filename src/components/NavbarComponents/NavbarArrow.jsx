@@ -1,5 +1,5 @@
-import arrow from './arrow-back.svg';
-import search from './search.svg';
+import arrow from './assets/arrow-back.svg';
+import search from './assets/search.svg';
 import { Container } from '../../styles/Navbar/NavbarArrowStyles';
 import { Link } from 'react-router-dom';
 
