@@ -1,6 +1,6 @@
 import React from 'react';
 // import Navbar from './components/Navbar/Navbar';
-import Navbar from './components/Navbar/Navbar-logic';
+import Navbar from './components/NavbarComponents/Navbar-logic';
 import Home from './pages/Home';
 import Account from './pages/Account';
 import Login from './pages/Login';
