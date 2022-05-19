@@ -1,16 +1,20 @@
 import styled from 'styled-components';
+import { Colors, Fonts } from '../GlobalStyles/GlobalStyles';
 
 export const FormInner = styled.div`
+
+    @media screen and (min-width: 478px) {
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
 `;
 
 export const Title = styled.h2`
     position: absolute;
     width: 39.6rem;
     height: 11.6rem;
-    font-size: 4.8rem;
+    font: var(--Headline-3);
     text-align: center;
     color: var(--Light);
     margin-top: 8rem;
@@ -22,9 +26,7 @@ export const UserContainer = styled.div`
     margin-top: 30.6rem;
 
     label {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
+    font: var(--Headline-6);
     line-height: 1.7rem;
     letter-spacing: 0.15em;
     color: var(--Light);
@@ -58,9 +60,7 @@ export const PasswordContainer = styled.div`
     margin-top: 3.2rem;
 
     label {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.8rem;
+    font: var(--Headline-6);
     line-height: 1.7rem;
     letter-spacing: 0.15em;
     color: var(--Light);
@@ -88,20 +88,26 @@ export const PasswordContainer = styled.div`
 
 `;
 
-export const LoginBtn = styled.input `
+export const LoginBtn = styled.input.attrs({ 
+    type: 'submit',
+    value: 'LOGIN',
+  }) `
     width: 17.1rem;
     height: 4.8rem;
     margin-top: 4.6rem;
     border: none;
     border-radius: 1.5rem;
     background-color: var(--Orange);
-    color: var(--Secondary);
-    font-weight: 800;
-    font-size: 1.4rem;
+    color: var(--White);
+    font: var(--Subtitle-1);
     letter-spacing: 0.125em;
+    cursor: pointer;
 `;
 
-export const Twitter = styled.input `
+export const Twitter = styled.input.attrs({ 
+    type: 'submit',
+    value: 'Connect with Twitter'
+  }) `
     width: 34.2rem;
     height: 5rem;
     margin-top: 9.6rem;
@@ -110,23 +116,24 @@ export const Twitter = styled.input `
     border-radius: 1.6rem;
     border: none;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
+    font: var(--Subtitle-1);
     line-height: 2rem;
     letter-spacing: 0.015em;
 
-    color: #FFFFFF;
+    color: var(--White);
+    cursor: pointer;
 `
 
-export const TwitterLogo = styled.img `
+export const TwitterLogo = styled.img`
     height: 3.6rem;
     width: 3.6rem;
     margin-right: 27rem;
     margin-top: -7.5rem;
 `;
 
-export const Facebook = styled.input `
+export const Facebook = styled.input.attrs({ 
+    type: 'submit'
+  }) `
     width: 34.2rem;
     height: 5rem;
     margin-top: 3.2rem;
@@ -134,13 +141,12 @@ export const Facebook = styled.input `
     border-radius: 1.6rem;
     border: none;
 
-    font-style: normal;
-    font-weight: 400;
-    font-size: 1.6rem;
+    font: var(--Subtitle-1);
     line-height: 2rem;
     letter-spacing: 0.015em;
 
-    color: #FFFFFF;
+    color: var(--White);
+    cursor: pointer;
 `;
 
 export const FacebookLogo = styled.img `
