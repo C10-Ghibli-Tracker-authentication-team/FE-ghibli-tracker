@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import DropDownList from '../../components/NavbarComponents/DropDownList';
 
 export const Container = styled.div`
   display: flex;
@@ -29,4 +30,13 @@ export const RightIcons = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 1.2rem;
+`;
+
+export const List = styled(DropDownList)`
+  width: 30%;
+  appearance: none;
+  border-radius: 15px;
+  height: 5rem;
+  padding: 0 1.2rem;
+  background: url('./selectStyle.svg') 96% / 15% no-repeat #94d1bd;
 `;

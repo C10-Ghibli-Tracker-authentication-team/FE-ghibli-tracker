@@ -4,13 +4,13 @@ import {
   ContainerNavbar,
   ContainerFilter,
   RightIcons,
+  List,
 } from '../../styles/Navbar/NavbarFilterStyles';
 import { Link } from 'react-router-dom';
 import filter from './assets/filter.svg';
 import arrow from './assets/arrow-back.svg';
 import search from './assets/search.svg';
 import './assets/down-arrow.svg';
-import DropDownList from './DropDownList';
 
 const NavbarFilter = () => {
   return (
@@ -28,7 +28,7 @@ const NavbarFilter = () => {
           </RightIcons>
         </ContainerNavbar>
         <ContainerFilter>
-          <DropDownList />
+          <List />
         </ContainerFilter>
       </Container>
     </>
