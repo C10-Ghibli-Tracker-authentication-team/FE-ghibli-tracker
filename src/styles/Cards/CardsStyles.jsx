@@ -7,6 +7,8 @@ export const Section = styled.section`
     border-radius: 2rem;
     border: none;
     background-color: ${Colors.LightGrey};
+    margin: 4rem 1.6rem;
+    height: auto;
 
     @media screen and (min-width: 478px) {
     margin: 8rem 3rem 2rem 3rem;
@@ -17,12 +19,13 @@ export const Image = styled.img`
     box-sizing: border-box;
     margin-left: -.25rem;
     border-radius: 2rem 0 0 2rem;
-    width: 30%;
-    height: inherit;
+    width: 15%;
     object-fit: cover;
 `;
 
 export const Data = styled.div`
+    display: grid;
+    align-items: center;
     margin: .5rem;
 `;
 
@@ -41,7 +44,7 @@ export const P = styled.p`
     margin: .5rem;
     margin-bottom: 2rem;
     max-width:100%;
-    min-height: 55%;
+    /* min-height: 55%; */
     font: var(--Headline-6);
 `;
 
@@ -63,4 +66,8 @@ export const Toggle = styled.button`
         width: 4rem;
         height: 4rem;
     }
+`
+
+export const Wrap = styled.div`
+
 `
