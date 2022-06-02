@@ -31,13 +31,13 @@ export const Data = styled.div`
 
 export const H2 = styled.h2`
     margin: .5rem;
-    font: var(--Headline-4);
+    font: ${Fonts['Headline-4']};
 `;
 
 export const H3 = styled.h3`
     margin: .5rem;
     margin-bottom: 1.5rem;
-    font: var(--Headline-6);
+    font: ${Fonts['Headline-6']};
 `;
 
 export const P = styled.p`
@@ -45,7 +45,7 @@ export const P = styled.p`
     margin-bottom: 2rem;
     max-width:100%;
     /* min-height: 55%; */
-    font: var(--Headline-6);
+    font: ${Fonts['Headline-6']};
 `;
 
 export const Rate = styled.div`
@@ -68,6 +68,4 @@ export const Toggle = styled.button`
     }
 `
 
-export const Wrap = styled.div`
-
-`
+export const Wrap = styled.div``
