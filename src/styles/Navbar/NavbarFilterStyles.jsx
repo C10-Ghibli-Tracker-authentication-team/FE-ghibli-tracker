@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import DropDownList from '../../components/NavbarComponents/DropDownList';
+import { Colors, Fonts } from '../../styles/GlobalStyles/GlobalStyles';
 
 export const Container = styled.div`
   display: flex;
@@ -21,22 +21,36 @@ export const ContainerNavbar = styled.div`
   }
 `;
 
-export const ContainerFilter = styled.div`
-  height: 20rem;
-  background: var(--Secondary);
-`;
-
 export const RightIcons = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 1.2rem;
 `;
 
-export const List = styled(DropDownList)`
-  width: 30%;
-  appearance: none;
-  border-radius: 15px;
-  height: 5rem;
-  padding: 0 1.2rem;
-  background: url('./selectStyle.svg') 96% / 15% no-repeat #94d1bd;
+export const ContainerFilter = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 23rem;
+  background: var(--Secondary);
+  padding: 1rem 8%;
+  @media screen and (min-width: 478px) {
+    flex-direction: row;
+    justify-content: space-around;
+    height: 15rem;
+  }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 1.6rem 0;
+  @media screen and (min-width: 478px) {
+    width: 45%;
+  }
+`;
+
+export const Label = styled.label`
+  color: ${Colors.Light};
+  font: ${Fonts.OVERLINE};
+  margin-bottom: .8rem;
 `;
