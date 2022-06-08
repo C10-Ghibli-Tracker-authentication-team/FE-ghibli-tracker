@@ -1,14 +1,17 @@
 import React from 'react';
+import { Select, I, SelectContainer } from '../../../styles/Navbar/DropDownListStyles';
 
-const DropDownList = () => {
+const DropDownList = ({ listOptions }) => {
   return (
     <>
-      <div>
-        <select>
-          <option value="year">Year</option>
-          <option value="title">Title</option>
-        </select>
-      </div>
+      <SelectContainer>
+        <Select>
+          {listOptions.map((option) => (
+            <option key={[option]}>{[option]}</option>
+          ))}
+        </Select>
+        <I />
+      </SelectContainer>
     </>
   );
 };
