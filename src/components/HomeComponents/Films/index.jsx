@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import CardsTablet from '../Cards/CardsTablet';
+import Cards from '../Cards/Cards';
+import '../../../index.css';
 
-const FilmsTablet = () => {
+const Films = () => {
   const [films, setFilms] = useState([]);
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const FilmsTablet = () => {
     <div className="films">
       {films.map((film) => {
         return (
-          <CardsTablet
+          <Cards
             image={film.image}
             title={film.title}
             year={film.release_date}
@@ -27,4 +28,4 @@ const FilmsTablet = () => {
   );
 };
 
-export default FilmsTablet;
+export default Films;

@@ -1,6 +1,6 @@
 import ReactStars from "react-rating-stars-component";
 import React from "react";
-import { Rate } from "../../../styles/Cards/CardsStyles";
+import { Rate } from "../../styles/Cards/CardsStyles";
 
 const Stars = {
   size: 40,

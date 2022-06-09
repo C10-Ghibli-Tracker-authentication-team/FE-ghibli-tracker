@@ -1,18 +1,28 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
 import Account from './pages/Account';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Login from './pages/Login';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import NavbarArrow from './components/NavbarComponents/NavbarArrow';
+import NavbarHome from './components/NavbarComponents/NavbarHome';
+import NavbarFilter from './components/NavbarComponents/NavbarFilter';
+import NavbarSearch from './components/NavbarComponents/NavbarSearch';
 
 function App() {
   return (
     <>
       <Router>
-        <Navbar />
-        <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/account" component={Account} />
-        </Switch>
+        <Routes>
+          <Route path='/account' element={<NavbarArrow/>}/>
+          <Route path='/' element={<NavbarHome/>}/>
+          <Route path='/filter' element={<NavbarFilter/>}/>
+          <Route path='/search' element={<NavbarSearch/>}/>
+        </Routes>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/account" element={<Account />} />
+        </Routes>
       </Router>
     </>
   );

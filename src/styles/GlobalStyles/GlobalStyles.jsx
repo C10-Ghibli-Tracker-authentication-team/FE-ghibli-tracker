@@ -5,13 +5,14 @@ export const Fonts = {
   'Headline-4': 'bold 3.6rem "Montserrat"',
   'Headline-5': 'normal 2.4rem "Montserrat"',
   'Headline-6': 'normal 2rem "Montserrat"',
-  'Subtitle-1': 'normal 1.6rem "Montserrat"',
+  'Subtitle-1': '500 1.6rem "Montserrat"',
   'Subtitle-2': 'normal 1.4rem "Montserrat"',
-  'Body-1': '1.6rem',
-  'Body-2': '1.4rem',
-  'BUTTON': '1.4rem',
-  'Caption': '1.2rem',
-  'OVERLINE': '1.6rem',
+  'Body-1': 'normal 1.6rem "Montserrat"',
+  'Body-2': 'normal 1.4rem "Montserrat"',
+  'BUTTON': 'normal 1.4rem "Montserrat"',
+  'Caption': 'normal 1.2rem "Montserrat"',
+  'OVERLINE': 'normal 1.6rem "Montserrat"',
+  'OVERLINE-2': 'normal 1.8rem "Montserrat"',
 }
 
 export const Colors = {
