@@ -5,7 +5,7 @@ export const Fonts = {
   'Headline-4': 'bold 3.6rem "Montserrat"',
   'Headline-5': 'normal 2.4rem "Montserrat"',
   'Headline-6': 'normal 2rem "Montserrat"',
-  'Subtitle-1': 'normal 1.6rem "Montserrat"',
+  'Subtitle-1': '500 1.6rem "Montserrat"',
   'Subtitle-2': 'normal 1.4rem "Montserrat"',
   'Body-1': 'normal 1.6rem "Montserrat"',
   'Body-2': 'normal 1.4rem "Montserrat"',
