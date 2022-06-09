@@ -11,7 +11,7 @@ export const Select = styled.select`
   cursor: pointer;
   border-radius: 15px;
   height: 5rem;
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 2.4rem;
   outline: none;
   border: none;
   background: ${Colors.LightGrey};
