@@ -43,8 +43,8 @@ export const Login = () => {
         isSubmitting: true,
         errorMessage: null
       });
-      fetch("https://be-ghibli-tracker.herokuapp.com/login", {
-        method: "post",
+      fetch("https://estudio-ghibli-2022.herokuapp.com/login/", {
+        method: "POST",
         headers: {
           "Content-Type": "application/json; charset=utf-8"
         },
@@ -108,7 +108,7 @@ export const Login = () => {
                 <span className="form-error">{data.errorMessage}</span>
                 )}
 
-            <LoginBtn type="button" className="LoginBtn" disabled={data.isSubmitting}>LOGIN</LoginBtn>
+            <LoginBtn type="button" className="LoginBtn" onClick={handleFormSubmit}>Login</LoginBtn>
             
 
             <Twitter type="submit" value="Connect with Twitter" className="twitter" />
