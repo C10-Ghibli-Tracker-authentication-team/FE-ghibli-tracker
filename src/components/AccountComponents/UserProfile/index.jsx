@@ -11,7 +11,7 @@ const UserProfile = () => {
   // const [user, setUser] = useState([]);
 
   useEffect(() => {
-    fetch('https://be-ghibli-tracker.herokuapp.com/auth/twitter').then((r) =>
+    fetch('https://estudio-ghibli-2022.herokuapp.com/auth/facebook').then((r) =>
       console.log(r.json())
     );
   }, []);
