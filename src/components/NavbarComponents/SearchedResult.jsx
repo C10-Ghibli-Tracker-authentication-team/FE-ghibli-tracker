@@ -1,11 +1,11 @@
 import React from 'react';
-import {Section, Image, H2} from '../../styles/Navbar/NavbarSearchStyles'
+import {Section, Image, MovieLink} from '../../styles/Navbar/NavbarSearchStyles'
 
-const SearchedResult = ({ image, title}) => {
+const SearchedResult = ({ image, title, id}) => {
   return (
     <Section>
       <Image src={image}/>
-      <H2>{title}</H2>
+      <MovieLink to={`/movie/${id}`}>{title}</MovieLink>
     </Section>
   );
 }

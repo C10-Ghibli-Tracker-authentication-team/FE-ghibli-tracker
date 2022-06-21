@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Fonts, Colors } from '../GlobalStyles/GlobalStyles';
+import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
@@ -59,11 +60,10 @@ export const RightIcons = styled.div`
 `;
 
 export const ContainerMovies = styled.div`
-  @media screen and (min-width: 478px) {
-    width: 48%;
-    align-self: end;
-
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1.4rem;
 `;
 
 export const Section = styled.div`
@@ -71,17 +71,26 @@ export const Section = styled.div`
   justify-items: center;
   gap: .4rem;
   background-color: ${Colors.Secondary};
+  border-radius: 1.5rem;
+  margin: .8rem .4rem;
+  @media screen and (min-width: 478px) {
+    max-width: 45%;
+    flex-wrap: wrap;
+  }
 `
 
 export const Image = styled.img`
     box-sizing: border-box;
     width: 7%;
     object-fit: cover;
+    border-radius: 1.5rem 0 0 1.5rem;
 `;
 
-export const H2 = styled.h2`
+export const MovieLink = styled(Link)`
     margin: .5rem;
     align-self: center;
     font: ${Fonts['Body-1']};
-    color: ${Colors.Light}
+    color: ${Colors.Light};
+    text-decoration:none;
+    
 `;
