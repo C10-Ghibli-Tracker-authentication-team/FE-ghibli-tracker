@@ -16,30 +16,34 @@ import {
     Facebook,
     FacebookLogo
 } from "../../styles/Login/LoginFormStyles";
-import SingUp from "./SingUp";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-    const Login = () => {
-      const [loginEmail, setLoginEmail] = useState("");
-      const [loginPassword, setLoginPassword] = useState("");
-      (async () => {
-        const rawResponse = await fetch('https://estudio-ghibli-2022.herokuapp.com/login', {
+    async function loginLogic(credentials) {
+        return fetch('https://estudio-ghibli-2022.herokuapp.com/login', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
           },
-          body: JSON.stringify({
-            email: loginEmail,
-            password: loginPassword})
-        });
-        const content = await rawResponse.json();
-      
-        console.log(content);
+          body: JSON.stringify(credentials)
+        })
+        .then(data => data.json())
       }
-    )()
-    
 
+    export default function Login({ setToken }) {
+      const [loginEmail, setLoginEmail] = useState();
+      const [loginPassword, setLoginPassword] = useState();
+
+      const handleSubmit = async e => {
+        e.preventDefault();
+        const token = await loginLogic({
+          loginEmail,
+          loginPassword
+        });
+        setToken(token);
+      }
+    
     return (
         <FormInner>
             <Title>Studio Ghibli Tracker</Title>
@@ -50,7 +54,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
                 </label>
                 <input 
                     placeholder="example@mail.com"
-                    // onChange={(e) => setLoginEmail(e.target.value)} 
+                    onChange={e => setLoginEmail(e.target.value)} 
                     />
                 <img src={user} alt="user logo" />
             </MailContainer>
@@ -60,15 +64,16 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
                 </label>
                 <input type="password"
                      placeholder="******"
-                    //  onChange={(e) => setLoginPassword(e.target.value)}
+                    onChange={e => setLoginPassword(e.target.value)}
                     />
                 <img src={key} alt="key logo" />
             </PasswordContainer>
 
-            <LoginBtn type="button" className="LoginBtn" onClick={Login}>Login</LoginBtn>
+            <LoginBtn type="submit" className="LoginBtn" onSubmit={handleSubmit}>Login</LoginBtn>
 
-            <ChangeView onClick={<Route path="/singup" element={<SingUp />} />}>Or create an account</ChangeView>
-            
+          {/* <ChangeView>
+            <Link to="/singup">Create an account</Link>
+          </ChangeView> */}
 
             <Twitter type="submit" value="Connect with Twitter" className="twitter" />
             <TwitterLogo src={twitter} alt="Twitter logo" className="TwitterLogo" />
@@ -76,5 +81,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
             <FacebookLogo src={facebook} alt="Facebook logo" className="FacebookLogo" />
         </FormInner>
     )
+  }
+
+  Login.propTypes = {
+    setToken: PropTypes.func.isRequired
   };
-export default Login;
