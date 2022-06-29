@@ -21,11 +21,12 @@ function App() {
       <Router>
         <Routes>
           <Route path='/account' element={<NavbarArrow/>}/>
+          <Route path='/movie' element={<NavbarArrow/>}/>
           <Route path='/' element={<NavbarHome/>}/>
           <Route path='/filter' element={<NavbarFilter/>}/>
           <Route path='/search' element={<NavbarSearch/>}/>
         </Routes>
-        <Routes> 
+        <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="movie/:id" element={<Movie />}/> */}
           <Route path="/account" element={<Account />} />

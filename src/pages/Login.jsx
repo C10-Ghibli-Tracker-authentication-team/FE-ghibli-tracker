@@ -1,6 +1,6 @@
-import React from "react";
-import Login from "../components/LoginComponents/index";
-import Home from "./Home";
+import React from 'react';
+import Login from '../components/LoginComponents/Login';
+import Home from './Home';
 
 export const AuthContext = React.createContext();
 

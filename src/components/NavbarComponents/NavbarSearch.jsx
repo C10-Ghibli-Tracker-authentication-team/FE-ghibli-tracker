@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import {apiUrl} from '../../utils/constants'
 import {
   Container,
   ContainerNavbar,
@@ -33,7 +34,7 @@ const NavbarSearch = () => {
   };
 
   useEffect(() => {
-    fetch('https://ghibliapi.herokuapp.com/films')
+    fetch(`${apiUrl}/films`)
       .then((r) => r.json())
       .then((r) => setFilms(r));
   }, []);
@@ -64,11 +65,15 @@ const NavbarSearch = () => {
         </ContainerNavbar>
         <ContainerMovies>
           {searchedMovies.map((film) => {
+            console.log('====================================');
+            console.log(film.id);
+            console.log('====================================');
             return (
               <SearchedResult
                 image={film.image}
                 title={film.title}
-                hey={film.title}
+                key={film.id}
+                id={film.id}
               />
             );
           })}
