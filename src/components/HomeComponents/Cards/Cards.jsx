@@ -7,7 +7,6 @@ import {
   H3,
   P,
   Rate,
-  Toggle,
   Wrap
 } from '../../../styles/Cards/CardsStyles';
 import Stars from '../../GlobalComponents/Stars';
@@ -29,9 +28,7 @@ const Cards = ({ image, title, year, description }) => {
           <Wrap>
             <Rate className="App">
               <ReactStars {...Stars} />
-              <Toggle className="FavIcon">
-                <FavIcon />
-              </Toggle>
+              <FavIcon />
             </Rate>
             <Link to="movie-details">Details</Link>
           </Wrap>
