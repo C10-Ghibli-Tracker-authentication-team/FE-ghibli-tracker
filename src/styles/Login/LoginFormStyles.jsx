@@ -133,7 +133,7 @@ export const PasswordContainer = styled.div`
 `;
 
 export const LoginBtn = styled.button.attrs({
-    type: 'button'
+    type: 'submit'
 }) `
     width: 17.1rem;
     height: 4.8rem;

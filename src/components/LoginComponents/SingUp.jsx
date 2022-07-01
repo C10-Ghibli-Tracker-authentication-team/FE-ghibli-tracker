@@ -61,14 +61,14 @@ const Register = () => {
       </UserContainer>
       <PasswordContainer className='PasswordContainer'>
         <label htmlFor='password'>Password</label>
-        <input placeholder='******' onChange={(e) => setRegisterPassword(e.target.value)}/>
+        <input type='password' placeholder='******' onChange={(e) => setRegisterPassword(e.target.value)}/>
         <img src={key} alt='key logo' />
       </PasswordContainer>
       <LoginBtn type='submit' className='LoginBtn'>
         Enviar
       </LoginBtn>
 
-      <ChangeView>Or login</ChangeView>
+      <ChangeView href='/login'>Or login</ChangeView>
 
       <Twitter type='submit' value='Connect with Twitter' className='twitter' />
       <TwitterLogo src={twitter} alt='Twitter logo' className='TwitterLogo' />

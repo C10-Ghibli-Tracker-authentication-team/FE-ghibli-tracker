@@ -31,6 +31,7 @@ function App() {
           <Route path="movie/:id" element={<Movie />}/>
           <Route path="/account" element={<Account />} />
           <Route path="/signup" element={<SingUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Router>
     </>

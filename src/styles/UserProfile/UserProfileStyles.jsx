@@ -8,6 +8,7 @@ export const UserInfo = styled.div`
 `;
 
 export const Image = styled.img`
+  width: 300px;
   border-radius: 50%;
 `;
 
