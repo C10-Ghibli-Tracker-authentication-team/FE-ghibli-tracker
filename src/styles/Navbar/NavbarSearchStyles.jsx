@@ -74,7 +74,7 @@ export const Section = styled.div`
   border-radius: 1.5rem;
   margin: .8rem .4rem;
   @media screen and (min-width: 478px) {
-    max-width: 45%;
+    max-width: 35%;
     flex-wrap: wrap;
   }
 `
@@ -92,5 +92,4 @@ export const MovieLink = styled(Link)`
     font: ${Fonts['Body-1']};
     color: ${Colors.Light};
     text-decoration:none;
-    
 `;
