@@ -1,7 +1,7 @@
 import React from 'react';
 import MovieDetail from '../components/MovieDetailComponents';
 
-const Movie = ({id, title, }) => {
+const Movie = ({ title }) => {
   return (
     <>
       <MovieDetail/>

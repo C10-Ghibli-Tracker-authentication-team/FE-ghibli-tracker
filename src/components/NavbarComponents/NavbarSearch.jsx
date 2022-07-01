@@ -69,6 +69,7 @@ const NavbarSearch = () => {
                 image={film.image}
                 title={film.title}
                 key={film.id}
+                id={film.id}
               />
             );
           })}
