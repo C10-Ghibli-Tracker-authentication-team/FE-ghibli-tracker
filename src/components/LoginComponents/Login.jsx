@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import user from "./user.png";
+import { useNavigate } from "react-router-dom";
+import userLogo from "./user.png";
 import key from "./key.png";
 import twitter from "./twitter.png";
 import facebook from "./facebook.png";
@@ -7,73 +8,81 @@ import {
     FormInner, 
     Title,
     Subtitle, 
-    MailContainer, 
-    PasswordContainer, 
+    Container, 
     LoginBtn, 
-    ChangeView,
     Twitter,
     TwitterLogo,
     Facebook,
-    FacebookLogo
+    FacebookLogo,
+    Redirect,
+    RedirectLabel,
+    RedirectLink
 } from "../../styles/Login/LoginFormStyles";
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
-    async function loginLogic(credentials) {
-        return fetch('https://estudio-ghibli-2022.herokuapp.com/login', {
-          method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(credentials)
-        })
-        .then(data => data.json())
-      }
 
-    export default function Login({ setToken }) {
-      const [loginEmail, setLoginEmail] = useState();
-      const [loginPassword, setLoginPassword] = useState();
+const Login = () => {
+      const [username, setUsername] = useState('')
+      const [password, setPassword] = useState('')
+      let navigate = useNavigate();
 
-      const handleSubmit = async e => {
-        e.preventDefault();
-        const token = await loginLogic({
-          loginEmail,
-          loginPassword
-        });
-        setToken(token);
-      }
-    
+      const onSubmitHandler = (async () => {
+         const rawResponse = await fetch('https://estudio-ghibli-2022.herokuapp.com/login', {
+           method: 'POST',
+           headers: {
+             'Accept': 'application/json',
+             'Content-Type': 'application/json',
+             'Authorization': 'Bearer ' + username.token
+           },
+           body: JSON.stringify({
+             email: username,
+             password: password})
+         });
+         const content = await rawResponse.json();
+
+         console.log(content);
+       })
+
     return (
-        <FormInner>
-            <Title>Studio Ghibli Tracker</Title>
-            <Subtitle>Login</Subtitle>
-            <MailContainer className="MailContainer">
+      <FormInner>
+        <Title>Studio Ghibli Tracker</Title>
+        <Subtitle>Login</Subtitle>
+            <Container className="MailContainer">
                 <label htmlFor="email">
                     Email
                 </label>
                 <input 
                     placeholder="example@mail.com"
-                    onChange={e => setLoginEmail(e.target.value)} 
+                    onChange={(e) => setUsername(e.target.value)} 
                     />
-                <img src={user} alt="user logo" />
-            </MailContainer>
-            <PasswordContainer className="PasswordContainer">
+                <img src={userLogo} alt="user logo" />
+            </Container>
+            <Container className="PasswordContainer">
                 <label htmlFor="password">
                     Password
                 </label>
-                <input type="password"
+                <input 
                      placeholder="******"
-                    onChange={e => setLoginPassword(e.target.value)}
+                     onChange={(e) => setPassword(e.target.value)}
                     />
                 <img src={key} alt="key logo" />
-            </PasswordContainer>
+            </Container>
 
-            <LoginBtn type="submit" className="LoginBtn" onSubmit={handleSubmit}>Login</LoginBtn>
+            <LoginBtn
+              type="button" 
+              className="LoginBtn" 
+              onClick={(e) => {
+                  e.preventDefault();
+                  onSubmitHandler();
+                  navigate("/");
+                                  }}
+            >
+              Login</LoginBtn>
 
-          {/* <ChangeView>
-            <Link to="/singup">Create an account</Link>
-          </ChangeView> */}
+            <Redirect>
+                    <RedirectLabel>Don't have an account?</RedirectLabel>
+                    <RedirectLink to="/register">Register</RedirectLink>
+                </Redirect>
+
 
             <Twitter type="submit" value="Connect with Twitter" className="twitter" />
             <TwitterLogo src={twitter} alt="Twitter logo" className="TwitterLogo" />
@@ -81,8 +90,5 @@ import PropTypes from 'prop-types';
             <FacebookLogo src={facebook} alt="Facebook logo" className="FacebookLogo" />
         </FormInner>
     )
-  }
-
-  Login.propTypes = {
-    setToken: PropTypes.func.isRequired
   };
+export default Login;
