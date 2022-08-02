@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { Colors, Fonts } from '../GlobalStyles/GlobalStyles';
+import { Link } from "react-router-dom";
 
-export const FormInner = styled.div`
+export const FormInner = styled.form`
 
     @media screen and (min-width: 478px) {
     display: flex;
@@ -30,10 +30,15 @@ export const Subtitle = styled.h2`
     margin-top: 22rem;
 `;
 
-export const MailContainer = styled.div`
+export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 30.6rem;
+    :first-of-type {
+        margin-top: 30.6rem;
+    }
+    :not(:last-of-type) {
+        margin-bottom: 1.5rem;
+    }
 
     label {
     font: var(--Headline-6);
@@ -64,77 +69,7 @@ export const MailContainer = styled.div`
 
 `;
 
-export const UserContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 3.2rem;
-
-    label {
-    font: var(--Headline-6);
-    line-height: 1.7rem;
-    letter-spacing: 0.15em;
-    color: var(--Light);
-    align-self: start;
-    margin-left: 1.2rem;
-}
-
-    input {
-    height: 5rem;
-    width: 34.2rem;
-    margin-top: 1.2rem;
-    border-radius: 1.6rem;
-    border: none;
-    background: #D4D4D4;
-    padding-left: 4rem;
-
-}
-
-    img {
-    width: 1.8rem;
-    height: 1.9rem;
-    margin-top: -3.5rem;
-    margin-left: 1.5rem;
-}
-
-`;
-
-export const PasswordContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 3.2rem;
-
-    label {
-    font: var(--Headline-6);
-    line-height: 1.7rem;
-    letter-spacing: 0.15em;
-    color: var(--Light);
-    align-self: start;
-    margin-left: 1.2rem;
-}
-
-    input {
-    height: 5rem;
-    width: 34.2rem;
-    margin-top: 1.2rem;
-    border-radius: 1.6rem;
-    border: none;
-    background: #D4D4D4;
-    padding-left: 4rem;
-
-}
-
-    img {
-    width: 1.8rem;
-    height: 1.9rem;
-    margin-top: -3.5rem;
-    margin-left: 1.5rem;
-}
-
-`;
-
-export const LoginBtn = styled.button.attrs({
-    type: 'button'
-}) `
+export const LoginBtn = styled.button`
     width: 17.1rem;
     height: 4.8rem;
     margin-top: 4.6rem;
@@ -147,18 +82,19 @@ export const LoginBtn = styled.button.attrs({
     cursor: pointer;
 `;
 
-export const ChangeView = styled.a`
-    width: 17.1rem;
-    height: 4.8rem;
-    margin-top: 4.6rem;
-
-    border: none;
-    border-radius: 1.5rem;
-    color: var(--White);
+export const Redirect = styled.div`
     font: var(--Subtitle-1);
-    letter-spacing: 0.125em;
-    cursor: pointer;
-    padding-left: 5rem;
+    width: 17.1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 4.6rem;
+`;
+export const RedirectLabel = styled.span`
+    color: var(--White);
+`;
+
+export const RedirectLink = styled(Link)`
+    color: var(--Light);
     &:hover {
     text-decoration: underline;
   }
