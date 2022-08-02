@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
 import userLogo from "./user.png";
 import key from "./key.png";
 import twitter from "./twitter.png";
@@ -18,64 +17,42 @@ import {
     RedirectLabel,
     RedirectLink
 } from "../../styles/Login/LoginFormStyles";
+import AuthContext from '../../context/AuthContext'
 
 
 const Login = () => {
-      const [username, setUsername] = useState('')
-      const [password, setPassword] = useState('')
-      let navigate = useNavigate();
-
-      const onSubmitHandler = (async () => {
-         const rawResponse = await fetch('https://estudio-ghibli-2022.herokuapp.com/login', {
-           method: 'POST',
-           headers: {
-             'Accept': 'application/json',
-             'Content-Type': 'application/json',
-             'Authorization': 'Bearer ' + username.token
-           },
-           body: JSON.stringify({
-             email: username,
-             password: password})
-         });
-         const content = await rawResponse.json();
-
-         console.log(content);
-       })
+  const {loginUser} = useContext(AuthContext)
 
     return (
-      <FormInner>
+      <FormInner onSubmit={loginUser}  >
         <Title>Studio Ghibli Tracker</Title>
         <Subtitle>Login</Subtitle>
-            <Container className="MailContainer">
-                <label htmlFor="email">
+            <Container>
+                <label>
                     Email
                 </label>
                 <input 
+                    name="username"
+                    type="mail"
                     placeholder="example@mail.com"
-                    onChange={(e) => setUsername(e.target.value)} 
                     />
                 <img src={userLogo} alt="user logo" />
             </Container>
-            <Container className="PasswordContainer">
-                <label htmlFor="password">
+            <Container>
+                <label>
                     Password
                 </label>
-                <input 
-                     placeholder="******"
-                     onChange={(e) => setPassword(e.target.value)}
+                <input
+                    name="password"
+                    type="password"
+                    placeholder="******"
                     />
                 <img src={key} alt="key logo" />
             </Container>
 
             <LoginBtn
-              type="button" 
-              className="LoginBtn" 
-              onClick={(e) => {
-                  e.preventDefault();
-                  onSubmitHandler();
-                  navigate("/");
-                                  }}
-            >
+              type="submit"
+              >
               Login</LoginBtn>
 
             <Redirect>
