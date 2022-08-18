@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Fonts, Colors } from '../GlobalStyles/GlobalStyles';
-import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
@@ -30,7 +29,7 @@ export const Input = styled.input`
   border: none;
   height: 100%;
   width: 100%;
-  :focus-visible{
+  :focus-visible {
     outline: none;
   }
   ::placeholder {
@@ -51,7 +50,7 @@ export const ContainerFilter = styled.div`
 export const RightIcons = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   gap: 1.2rem;
   width: 100%;
   @media screen and (min-width: 478px) {
@@ -60,36 +59,28 @@ export const RightIcons = styled.div`
 `;
 
 export const ContainerMovies = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1.4rem;
+  @media screen and (min-width: 478px) {
+    width: 48%;
+    align-self: end;
+  }
 `;
 
 export const Section = styled.div`
   display: flex;
   justify-items: center;
-  gap: .4rem;
+  gap: 0.4rem;
   background-color: ${Colors.Secondary};
-  border-radius: 1.5rem;
-  margin: .8rem .4rem;
-  @media screen and (min-width: 478px) {
-    max-width: 35%;
-    flex-wrap: wrap;
-  }
-`
-
-export const Image = styled.img`
-    box-sizing: border-box;
-    width: 7%;
-    object-fit: cover;
-    border-radius: 1.5rem 0 0 1.5rem;
 `;
 
-export const MovieLink = styled(Link)`
-    margin: .5rem;
-    align-self: center;
-    font: ${Fonts['Body-1']};
-    color: ${Colors.Light};
-    text-decoration:none;
+export const Image = styled.img`
+  box-sizing: border-box;
+  width: 7%;
+  object-fit: cover;
+`;
+
+export const H2 = styled.h2`
+  margin: 0.5rem;
+  align-self: center;
+  font: ${Fonts['Body-1']};
+  color: ${Colors.Light};
 `;
