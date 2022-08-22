@@ -29,7 +29,7 @@ export const Input = styled.input`
   border: none;
   height: 100%;
   width: 100%;
-  :focus-visible{
+  :focus-visible {
     outline: none;
   }
   ::placeholder {
@@ -50,7 +50,7 @@ export const ContainerFilter = styled.div`
 export const RightIcons = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items:center;
+  align-items: center;
   gap: 1.2rem;
   width: 100%;
   @media screen and (min-width: 478px) {
@@ -62,26 +62,25 @@ export const ContainerMovies = styled.div`
   @media screen and (min-width: 478px) {
     width: 48%;
     align-self: end;
-
   }
 `;
 
 export const Section = styled.div`
   display: flex;
   justify-items: center;
-  gap: .4rem;
+  gap: 0.4rem;
   background-color: ${Colors.Secondary};
-`
+`;
 
 export const Image = styled.img`
-    box-sizing: border-box;
-    width: 7%;
-    object-fit: cover;
+  box-sizing: border-box;
+  width: 7%;
+  object-fit: cover;
 `;
 
 export const H2 = styled.h2`
-    margin: .5rem;
-    align-self: center;
-    font: ${Fonts['Body-1']};
-    color: ${Colors.Light}
+  margin: 0.5rem;
+  align-self: center;
+  font: ${Fonts['Body-1']};
+  color: ${Colors.Light};
 `;
