@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Container, Image, Name, Email } from "../../styles/Landing/ProfileStyles";
+import Home from "../../pages/Home";
+import NavbarHome from "../NavbarComponents/NavbarHome";
 
 
 
@@ -10,15 +12,15 @@ export const Profile = () => {
 
   useEffect(() => {
     const getUserMetadata = async () => {
-      const domain = "ghiblitrackerapi.com";
+      const domain = "fe-ghibli-tracker.us.auth0.com";
   
       try {
         const accessToken = await getAccessTokenSilently({
-          audience: `https://${domain}`,
+          audience: `https://${domain}/api/v2/`,
           scope: "read:current_user",
         });
   
-        const userDetailsByIdUrl = `https://${domain}/users/${user.sub}`;
+        const userDetailsByIdUrl = `https://${domain}/api/v2/users/${user.sub}`;
   
         const metadataResponse = await fetch(userDetailsByIdUrl, {
           headers: {
@@ -39,11 +41,15 @@ export const Profile = () => {
 
   return (
     isAuthenticated && (
-      <Container>
-        <Image src={user.picture} alt={user.name} />
-        <Name>{user.name}</Name>
-        <Email>{user.email}</Email>
-      </Container>
+      <>
+      <NavbarHome />
+      <Home />
+      </>
+      // <Container>
+      //   <Image src={user.picture} alt={user.name} />
+      //   <Name>{user.name}</Name>
+      //   <Email>{user.email}</Email>
+      // </Container>
     )
   );
 
