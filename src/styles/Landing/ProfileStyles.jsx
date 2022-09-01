@@ -40,7 +40,7 @@ export const Email = styled.p`
 export const LogOutBtn = styled.button`
   width: 17.1rem;
   height: 4.8rem;
-  margin-top: 35rem;
+  margin-top: 3rem;
   border: none;
   border-radius: 1.5rem;
   background-color: var(--Orange);
