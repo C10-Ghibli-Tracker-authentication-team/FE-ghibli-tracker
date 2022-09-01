@@ -6,6 +6,7 @@ import {
   Image,
   UserName,
 } from '../../../styles/UserProfile/UserProfileStyles';
+import LogoutButton from '../../LoginComponents/LogOut';
 
 const UserProfile = () => {
   // const [user, setUser] = useState([]);
@@ -24,6 +25,7 @@ const UserProfile = () => {
           <Image src={user_profile} alt="user image profile" />
         </Figure>
         <UserName className="username">{/* {username} */} gabriel_</UserName>
+        <LogoutButton>LogOut</LogoutButton>
       </UserInfo>
     </>
   );
